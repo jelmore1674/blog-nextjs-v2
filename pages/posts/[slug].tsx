@@ -30,6 +30,7 @@ const SinglePostPage: React.FC<Props> = ({ post }) => {
 				<meta property='og:url' content={currentURL} />
 				<meta property='og:type' content='article' />
 				<meta property='og:image' content={imagePath} />
+				<meta property='og:image:secure_url' content={imagePath} />
 				<meta property='og:image:width' content='500' />
 				<meta property='og:image:height' content='500' />
 				<meta property='og:site_name' content={siteName} />
