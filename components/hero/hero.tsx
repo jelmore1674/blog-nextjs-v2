@@ -17,6 +17,7 @@ export const Hero: React.FC = () => {
 					width={300}
 					height={300}
 					layout='responsive'
+					priority
 				/>
 			</ImageContainer>
 			<HeroText>
