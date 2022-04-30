@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://blog.justinelmore.dev/sitemap.xml
