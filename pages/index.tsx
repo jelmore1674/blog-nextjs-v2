@@ -12,7 +12,7 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ posts }) => {
 	return (
-		<>
+		<React.Fragment>
 			<Head>
 				<meta
 					httpEquiv='Content-Type'
@@ -26,7 +26,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 			</Head>
 			<Hero />
 			<FeaturedPosts posts={posts} />
-		</>
+		</React.Fragment>
 	);
 };
 

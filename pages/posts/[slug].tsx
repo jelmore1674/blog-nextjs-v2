@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
+import React from 'react';
 import { PostDetail } from '../../components/posts/post-detail';
 import { getPostData, getPostsFiles } from '../../lib/posts-util';
 import { Post } from '../../types';
@@ -14,7 +15,7 @@ const SinglePostPage: NextPage<Props> = ({ post }) => {
 	const currentURL = `https://blog.justinelmore.dev/posts/${post.slug}`;
 	const siteName = 'Justin Elmore Blog';
 	return (
-		<>
+		<React.Fragment>
 			<Head>
 				<title>{post.title}</title>
 				<meta name='description' content={post.excerpt} />
@@ -27,18 +28,30 @@ const SinglePostPage: NextPage<Props> = ({ post }) => {
 				/>
 
 				{/* Open Graph */}
-				<meta property='og:url' content={currentURL} />
+				<meta property='og:url' content={currentURL} key='ogurl' />
 				<meta property='og:type' content='article' />
-				<meta property='og:image' content={imagePath} />
-				<meta property='og:image:secure_url' content={imagePath} />
+				<meta property='og:image' content={imagePath} key='ogimage' />
+				<meta
+					property='og:image:secure_url'
+					content={imagePath}
+					key='ogimagesecureurl'
+				/>
 				<meta property='og:image:width' content='500' />
 				<meta property='og:image:height' content='500' />
-				<meta property='og:site_name' content={siteName} />
-				<meta property='og:title' content={post.title} />
-				<meta property='og:description' content={post.excerpt} />
+				<meta
+					property='og:site_name'
+					content={siteName}
+					key='ogsitename'
+				/>
+				<meta property='og:title' content={post.title} key='ogtitle' />
+				<meta
+					property='og:description'
+					content={post.excerpt}
+					key='ogdesc'
+				/>
 			</Head>
 			<PostDetail post={post} />
-		</>
+		</React.Fragment>
 	);
 };
 

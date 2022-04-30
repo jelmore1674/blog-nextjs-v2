@@ -1,10 +1,11 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
+import React from 'react';
 import { ContactForm } from '../components/contact';
 
 const ContactPage: NextPage = () => {
 	return (
-		<>
+		<React.Fragment>
 			<Head>
 				<title>Justin Elmore Blog</title>
 				<meta
@@ -13,7 +14,7 @@ const ContactPage: NextPage = () => {
 				/>
 			</Head>
 			<ContactForm />
-		</>
+		</React.Fragment>
 	);
 };
 
