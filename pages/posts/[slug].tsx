@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import { PostDetail } from '../../components/posts/post-detail';
 import { getPostData, getPostsFiles } from '../../lib/posts-util';
@@ -8,7 +8,7 @@ interface Props {
 	post: Post;
 }
 
-const SinglePostPage: React.FC<Props> = ({ post }) => {
+const SinglePostPage: NextPage<Props> = ({ post }) => {
 	const imagePath = `https://blog.justinelmore.dev/images/posts/${post.slug}/${post.image}`;
 	const twitterHandle = '@jelmore1674';
 	const currentURL = `https://blog.justinelmore.dev/posts/${post.slug}`;
@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 	};
 };
 
-export const getStaticPaths: GetStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = async () => {
 	const postFileNames = getPostsFiles();
 	const slugs = postFileNames.map((fileName) =>
 		fileName.replace(/\.mdx$/, '')

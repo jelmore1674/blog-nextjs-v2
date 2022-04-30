@@ -7,8 +7,8 @@ async function generate() {
 	const pages = await globby([
 		'pages/*.tsx',
 		'pages/*.mdx',
-		'content/**/*.md',
-		'!content/*.md',
+		'content/**/*.mdx',
+		'!content/*.mdx',
 		'!pages/_*.tsx',
 		'!pages/api',
 		'!pages/404.tsx',
