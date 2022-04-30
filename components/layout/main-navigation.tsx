@@ -49,13 +49,17 @@ export const MainNavigation = (): JSX.Element => {
 			<MobileNav>
 				<MobileUL show={showMobileNav}>
 					<Link href='/posts' passHref>
-						<LI>
-							<StyledLink>Posts</StyledLink>
+						<LI onClick={() => setShowMobileNav(!showMobileNav)}>
+							<Link href='/posts' passHref>
+								<StyledLink>Posts</StyledLink>
+							</Link>
 						</LI>
 					</Link>
 					<Link href='/contact' passHref>
-						<LI>
-							<StyledLink>Contact</StyledLink>
+						<LI onClick={() => setShowMobileNav(!showMobileNav)}>
+							<Link href='/contact' passHref>
+								<StyledLink>Contact</StyledLink>
+							</Link>
 						</LI>
 					</Link>
 				</MobileUL>

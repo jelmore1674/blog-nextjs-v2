@@ -48,7 +48,7 @@ export const PostDetail = ({ post }: Props): JSX.Element => {
 						<BlogImage>
 							<Image
 								src={`/images/posts/${slug}/${image.properties.src}`}
-								alt={image.alt}
+								alt={image.properties.alt}
 								width={960}
 								height={540}
 								layout='responsive'
@@ -103,6 +103,7 @@ export const PostDetail = ({ post }: Props): JSX.Element => {
 						width={960}
 						height={540}
 						layout='responsive'
+						priority
 					/>
 				</FeaturedImage>
 			</PostHeader>

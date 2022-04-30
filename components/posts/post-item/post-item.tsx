@@ -37,7 +37,7 @@ export const PostItem = ({
 	const linkPath = `/posts/${slug}`;
 	return (
 		<PostCard>
-			<Link href={linkPath} passHref>
+			<Link href={linkPath}>
 				<div>
 					<CardImage>
 						<Image
@@ -55,7 +55,7 @@ export const PostItem = ({
 					</CardContent>
 					<CardFooter>
 						<Link href={linkPath} passHref>
-							<PostCardA>Read More</PostCardA>
+							<PostCardA>Continue Reading</PostCardA>
 						</Link>
 					</CardFooter>
 				</div>
