@@ -6,32 +6,21 @@ import { Layout } from '../components/layout';
 import { GlobalStyle } from '../styles/globals';
 
 function MyApp({ Component, pageProps }: AppProps) {
-	const [showChild, setShowChild] = useState(false);
-	useEffect(() => {
-		setShowChild(true);
-	}, []);
-	if (!showChild) {
-		return <React.Fragment></React.Fragment>;
-	}
-	if (typeof window === 'undefined') {
-		return <React.Fragment></React.Fragment>;
-	} else {
-		return (
-			<React.Fragment>
-				<GlobalStyle />
-				<Layout>
-					<Head>
-						<meta
-							name='viewport'
-							content='width=device-width, initial-scale=1.0'
-						/>
-						<link rel='icon' href='/favicon.png' />
-					</Head>
-					<Component {...pageProps} />
-				</Layout>
-			</React.Fragment>
-		);
-	}
+	return (
+		<React.Fragment>
+			<GlobalStyle />
+			<Layout>
+				<Head>
+					<meta
+						name='viewport'
+						content='width=device-width, initial-scale=1.0'
+					/>
+					<link rel='icon' href='/favicon.png' />
+				</Head>
+				<Component {...pageProps} />
+			</Layout>
+		</React.Fragment>
+	);
 }
 
 export default MyApp;
