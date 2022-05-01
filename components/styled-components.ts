@@ -306,11 +306,14 @@ export const A = tw.a`
 	hover:dark:text-gray-100
 `;
 
-export const PostCardA = styled(A)`
-	${tw`
-	hover:text-primary-dark	
-	`}
-`;
+export const PostCardP = tw.p`
+	cursor-pointer
+	ease-in-out
+	text-primary
+	dark:text-primary-light	
+	hover:text-gray-700
+	hover:dark:text-gray-100
+	`;
 
 export const PostCard = styled.li`
 	${tw`

@@ -7,7 +7,7 @@ import {
 	CardP,
 	CardTitle,
 	PostCard,
-	PostCardA,
+	PostCardP,
 	Time,
 } from '../../styled-components';
 
@@ -36,8 +36,8 @@ export const PostItem = ({
 	const imagePath = `/images/posts/${slug}/${image}`;
 	const linkPath = `/posts/${slug}`;
 	return (
-		<PostCard>
-			<Link href={linkPath}>
+		<Link href={linkPath}>
+			<PostCard>
 				<CardImage>
 					<Image
 						src={imagePath}
@@ -53,9 +53,9 @@ export const PostItem = ({
 					<CardP>{shortenedExcerpt}</CardP>
 				</CardContent>
 				<CardFooter>
-					<PostCardA href={linkPath}>Continue Reading</PostCardA>
+					<PostCardP>Continue Reading</PostCardP>
 				</CardFooter>
-			</Link>
-		</PostCard>
+			</PostCard>
+		</Link>
 	);
 };
