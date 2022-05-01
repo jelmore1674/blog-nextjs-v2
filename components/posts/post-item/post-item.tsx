@@ -38,7 +38,7 @@ export const PostItem = ({
 	return (
 		<PostCard>
 			<Link href={linkPath}>
-				<div>
+				<>
 					<CardImage>
 						<Image
 							src={imagePath}
@@ -58,7 +58,7 @@ export const PostItem = ({
 							<PostCardA>Continue Reading</PostCardA>
 						</Link>
 					</CardFooter>
-				</div>
+				</>
 			</Link>
 		</PostCard>
 	);
