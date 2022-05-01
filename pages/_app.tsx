@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 		return null;
 	}
 	if (typeof window === 'undefined') {
-		return <></>;
+		return <React.Fragment></React.Fragment>;
 	} else {
 		return (
 			<React.Fragment>
