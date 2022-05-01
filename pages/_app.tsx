@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 		setShowChild(true);
 	}, []);
 	if (!showChild) {
-		return null;
+		return <React.Fragment></React.Fragment>;
 	}
 	if (typeof window === 'undefined') {
 		return <React.Fragment></React.Fragment>;
