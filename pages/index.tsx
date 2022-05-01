@@ -24,7 +24,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 					content='I am a web developer, looking to spread my experiences on my coding journey.'
 				/>
 			</Head>
-			<Hero />
+			{/* <Hero /> */}
 			<FeaturedPosts posts={posts} />
 		</React.Fragment>
 	);
