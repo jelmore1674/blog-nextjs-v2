@@ -38,27 +38,23 @@ export const PostItem = ({
 	return (
 		<PostCard>
 			<Link href={linkPath}>
-				<>
-					<CardImage>
-						<Image
-							src={imagePath}
-							alt={title}
-							width={500}
-							height={300}
-							layout='responsive'
-						/>
-					</CardImage>
-					<CardContent>
-						<CardTitle>{title}</CardTitle>
-						<Time>{formattedDate}</Time>
-						<CardP>{shortenedExcerpt}</CardP>
-					</CardContent>
-					<CardFooter>
-						<Link href={linkPath} passHref>
-							<PostCardA>Continue Reading</PostCardA>
-						</Link>
-					</CardFooter>
-				</>
+				<CardImage>
+					<Image
+						src={imagePath}
+						alt={title}
+						width={500}
+						height={300}
+						layout='responsive'
+					/>
+				</CardImage>
+				<CardContent>
+					<CardTitle>{title}</CardTitle>
+					<Time>{formattedDate}</Time>
+					<CardP>{shortenedExcerpt}</CardP>
+				</CardContent>
+				<CardFooter>
+					<PostCardA href={linkPath}>Continue Reading</PostCardA>
+				</CardFooter>
 			</Link>
 		</PostCard>
 	);
